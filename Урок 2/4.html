@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Homework</title>
+</head>
+
+<body>
+  <!--
+Обязательное задание.
+
+Необходимо реализовать четыре функции, каждая функция должна принимать по два
+числа и выполнять одну из операций (каждая функция выполняет одну из них):
+1. Сложение
+2. Разность
+3. Умножение
+4. Деление
+
+Необходимо сделать так, чтобы функция вернула число, например выражение
+`console.log(sum(2, 6));` должно вывести число 8 в консоль (sum - функция
+сложения в данном примере, ваши названия функций могут отличаться).
+
+Округлять значения, которые возвращают функции не нужно, однако, обратите
+внимание на разность, функция должна вычесть из большего числа меньшее, либо
+вернуть 0, если числа равны.
+
+Функциям всегда передаются корректные числа, проверки на NaN, Infinity делать
+не нужно.
+
+Необходимо для всех функций прописать комментарии jsdoc https://jsdoc.app/.
+-->
+  <script>
+    "use strict";
+
+    /**
+     * Get sum of two numbers.
+     * @param {number} num1 - first number.
+     * @param {number} num2 - second number.
+     * @return {number} sum of two numbers.
+     */
+    function getSum(num1, num2) {
+      return num1 + num2;
+    }
+
+    /**
+     * Get subtraction of two numbers.
+     * @param {number} num1 - first number.
+     * @param {number} num2 - second number.
+     * @return {number} subtraction of two numbers.
+     */
+    function getSub(num1, num2) {
+      if (num1 > num2) {
+        return num1 - num2;
+      } else if (num1 < num2) {
+        return num1 - num2;
+      } else if (num1 === num2) {
+        return 0;
+      }
+    }
+
+    /**
+     * Get multiplication of two numbers.
+     * @param {number} num1 - first number.
+     * @param {number} num2 - second number.
+     * @return {number} multiplication of two numbers.
+     */
+    function getMult(num1, num2) {
+      return num1 * num2;
+    }
+
+    /**
+     * Get division of two numbers.
+     * @param {number} num1 - first number.
+     * @param {number} num2 - second number.
+     * @return {number} division of two numbers.
+     */
+    function getDiv(num1, num2) {
+      return num1 / num2;
+    }
+
+    console.log(getSum(1, 2))
+    console.log(getSub(4, 2))
+    console.log(getMult(2, 3))
+    console.log(getDiv(6, 2))
+
+  </script>
+</body>
+
+</html>
